@@ -1,0 +1,8 @@
+/.vscode
+/build
+/.git
+/external/pdcurses.a
+/external/pdcurses.lib
+/external/SFML-2.5.1
+/include/curses.h
+/include/panel.h

@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
     start_color(); //use colors
     leaveok(stdscr, true); //leaves cursor where it was left
     keypad(stdscr, true); //arrow key
+    curs_set(0); //set cursor as invisible
 
     //mp3 files in directory
     TrackList list{std::filesystem::path{path}};

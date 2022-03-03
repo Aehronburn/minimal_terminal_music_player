@@ -1,7 +1,3 @@
-//TODO: handle resize
-//TODO: autoplay
-//TODO: repeat
-
 #include <curses.h>
 
 #include <thread>

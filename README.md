@@ -30,7 +30,9 @@ Press:
 * <kbd>r</kbd> to toggle loop on/off
 * <kbd>q</kbd> to close(also <kbd>ctrl+c</kbd> or just closing the window works)
 
-You can resize the terminal as you wish, the UI will adapt
+You can resize the terminal as you wish, the UI will adapt.
+
+If it doesn't run, first install OpenAL and the latest Visual C++ redistributables(for Windows).
 
 ## Architecture
 * The *main* process is tasked with displaying the UI and handling the input.
@@ -51,14 +53,15 @@ The main process launches a two threads:
 
 After the steps above are completed, configure cmake to generate for a 32bit architecture(-A flag), then build.
 For example, on a Windows build:
-```shell
+```markdown
 mkdir build && cd build
 cmake -A Win32 ..
 cmake --build . --config Release
 ```
 
-If you wish to hardcode the path to the music directory, just modify the variable ```path``` in src/main.cpp main function.
+```markdown
 
 ## Issues
 Listening with headphones and then unplugging them will require a restart of the program.
 
+```

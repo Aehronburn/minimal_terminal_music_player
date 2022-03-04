@@ -11,10 +11,13 @@ set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR ${CMAKE_SOURCE_DIR}/external/SFML-2.5.1/lib/cmake/SFML)
 find_package(SFML 2.5.1 COMPONENTS audio REQUIRED)
 
-#music player
-add_library(player STATIC src/player.cpp)
-target_link_libraries(player sfml-audio)
+add_executable(MusicPlayer src/main.cpp src/trackList.cpp src/player.cpp)
 
-add_executable(MusicPlayer src/main.cpp src/trackList.cpp)
-target_link_libraries(MusicPlayer ${CMAKE_SOURCE_DIR}/external/pdcurses.lib)
-target_link_libraries(MusicPlayer player)
+target_link_libraries(MusicPlayer sfml-audio)
+
+if(UNIX)
+    target_link_libraries(MusicPlayer ${CMAKE_SOURCE_DIR}/external/libncurses.a)
+endif(UNIX)
+if(WIN32)
+    target_link_libraries(MusicPlayer ${CMAKE_SOURCE_DIR}/external/pdcurses.lib)
+endif(WIN32)

@@ -42,11 +42,12 @@ The main process launches a two threads:
 2. For checking if the current song has finished playing every two seconds, and skipping to the next track in the list in that case.
 
 ## How to build
-1. Download Ncurses(PDcurses for Windows) and build it **statically**.
-2. Copy curses.h and panel.h from the Ncurses folder and paste them into **/include**
-3. Copy the just built libncurses.a(pdcurses.lib on Windows) into **/external**. 
-4. Download SFML 2.5.1 32bit
-4. Copy the extracted folder into **/external**
+1. Create /external directory in the root
+2. Download Ncurses(PDcurses for Windows) and build it **statically**.
+3. Copy curses.h and panel.h from the Ncurses folder and paste them into **/include**
+4. Copy the just built libncurses.a(pdcurses.lib on Windows) into **/external**. 
+5. Download SFML 2.5.1 32bit
+6. Copy the extracted folder into **/external**
 
 After the steps above are completed, configure cmake to generate for a 32bit architecture(-A flag), then build.
 For example, on a Windows build:

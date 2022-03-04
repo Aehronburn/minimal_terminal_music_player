@@ -50,7 +50,7 @@ The main process launches a two threads:
 
 After the steps above are completed, configure cmake to generate for a 32bit architecture(-A flag), then build.
 For example, on a Windows build:
-```cmd
+```shell
 mkdir build && cd build
 cmake -A Win32 ..
 cmake --build . --config Release

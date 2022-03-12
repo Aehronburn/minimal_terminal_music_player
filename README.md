@@ -59,9 +59,5 @@ cmake -A Win32 ..
 cmake --build . --config Release
 ```
 
-```markdown
-
 ## Issues
 Listening with headphones and then unplugging them will require a restart of the program.
-
-```
